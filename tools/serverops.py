@@ -111,6 +111,9 @@ SEND_MESSAGES = 1 << 11
 ONBOARDING_MODES = {0: "default", 1: "advanced"}
 ONBOARDING_MIN_DEFAULTS = 7
 ONBOARDING_MIN_POSTABLE = 5
+#: Advice from the last ``check_onboarding`` (shown, never failing a check: Discord
+#: itself accepts these).
+WARNINGS: list[str] = []
 PROMPT_KEYS = {"title", "single_select", "required", "in_onboarding", "options"}
 OPTION_KEYS = {"title", "description", "emoji", "channels", "roles"}
 
@@ -199,8 +202,8 @@ def export_onboarding(raw: dict | None, roles: list[dict], channels: list[dict])
                         "options": opts})
     return {"enabled": bool(raw.get("enabled")),
             "mode": ONBOARDING_MODES.get(int(raw.get("mode") or 0), "default"),
-            "default_channels": [cname.get(str(i), f"id:{i}")
-                                 for i in raw.get("default_channel_ids") or []],
+            "default_channels": sorted(cname.get(str(i), f"id:{i}")
+                                       for i in raw.get("default_channel_ids") or []),
             "prompts": prompts}
 
 
@@ -413,6 +416,7 @@ def check_onboarding(bundle: dict[str, Any]) -> list[str]:
     if not isinstance(ob, dict):
         return [f"{f}: not an object"]
     problems: list[str] = []
+    del WARNINGS[:]
     unknown = set(ob) - {"enabled", "mode", "default_channels", "prompts"}
     if unknown:
         problems.append(f"{f}: unknown key(s) " + ", ".join(sorted(unknown)))
@@ -482,9 +486,9 @@ def check_onboarding(bundle: dict[str, Any]) -> list[str]:
                 if c not in chan_names and not str(c).startswith("id:"):
                     problems.append(f"{ow}: channel #{c} is not in {LAYOUT_FILE}")
                 elif c in chan_names and not _visible(layout, c, roles):
-                    problems.append(f"{ow}: a newcomer who picks this cannot see #{c} "
+                    WARNINGS.append(f"{ow}: a newcomer who picks this may not see #{c} "
                                     "(hidden from @everyone, and the option gives no "
-                                    "role that can see it)")
+                                    "role with an overwrite there)")
             for r in roles:
                 if r not in roles_by_name:
                     problems.append(f"{ow}: role {r!r} is not in {LAYOUT_FILE}")
@@ -611,17 +615,29 @@ def _plan_layout(want: dict, have: dict) -> list[dict]:
             if h is not None and str(h["allow"]) == str(w["allow"]) \
                     and str(h["deny"]) == str(w["deny"]):
                 continue
-            old_allow = (_bits(h["allow"]) or 0) if h else 0
-            new_allow = (_bits(w["allow"]) or 0) & ~old_allow
+            ha, hd = ((_bits(h["allow"]) or 0, _bits(h["deny"]) or 0) if h else (0, 0))
+            wa, wd = _bits(w["allow"]) or 0, _bits(w["deny"]) or 0
+            add, clear = wa & ~ha, hd & ~wd
+            # MERGE when the change only widens access: OR the new allow bits in and
+            # clear those (and any dropped) deny bits, against the LIVE overwrite at
+            # apply time, so a hand-added bit is never lost. Anything that narrows
+            # access (an allow bit dropped, a deny bit added) replaces the overwrite
+            # and is destructive.
+            narrows = bool(ha & ~wa or wd & ~hd)
             refused = _guard({**c, "overwrites": [w]})
-            grants = _named(new_allow)
-            risk = FORBIDDEN if refused else (POWERFUL if grants else SAFE)
+            grants = _named(add)
+            risk = FORBIDDEN if refused else DESTRUCTIVE if narrows else (
+                POWERFUL if grants else SAFE)
             updates.append(_op("set_overwrite", _where(c), risk,
                                "; ".join(refused) or
-                               f"{t}: allow {w['allow']} deny {w['deny']}"
+                               (f"{t}: replace with allow {w['allow']} deny {w['deny']} "
+                                "(narrows access)" if narrows else
+                                f"{t}: add allow {add}" + (f", clear deny {clear}"
+                                                           if clear else ""))
                                + (f" (grants {', '.join(grants)})" if grants else ""),
-                               key=list(k), target=t, allow=str(w["allow"]),
-                               deny=str(w["deny"])))
+                               key=list(k), target=t, allow=str(wa), deny=str(wd),
+                               mode="replace" if narrows else "merge", add=str(add),
+                               clear=str(clear)))
     creates.sort(key=lambda o: o["args"]["channel"]["type"] != "category")
     gone = set(moved.values())
     for k, c in have_ch.items():
@@ -688,6 +704,9 @@ def _plan_onboarding(want: dict[str, Any], have: dict[str, Any]) -> list[dict]:
         return []
     norm = {"enabled": False, "mode": "default", "default_channels": [], "prompts": []}
     w, h = {**norm, **w}, {**norm, **h}
+    # Discord does not keep the default channels in order: compare them as a set.
+    w["default_channels"] = sorted(w["default_channels"] or [])
+    h["default_channels"] = sorted(h["default_channels"] or [])
     if w == h:
         return []
     bits = []
@@ -796,6 +815,9 @@ def _cli(argv: list[str] | None = None) -> int:
     if problems:
         text = ("### Check failed: fix these before this can merge\n\n"
                 + "\n".join(f"- {x}" for x in problems) + "\n\n")
+    if WARNINGS:
+        text += ("### Worth a look (not blocking)\n\n"
+                 + "\n".join(f"- {x}" for x in WARNINGS) + "\n\n")
     if not p1 + p2 and isinstance(head.get(LAYOUT_FILE), dict):
         ops = plan(head, base)
         text += render(ops, "What the bot will do after merge", labels)
