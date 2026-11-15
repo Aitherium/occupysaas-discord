@@ -1,6 +1,205 @@
 {
- "enabled": false,
+ "enabled": true,
  "mode": "default",
- "default_channels": [],
- "prompts": []
+ "default_channels": [
+  "start-here",
+  "rules",
+  "announcements",
+  "general",
+  "how-to-help-contribute",
+  "projects",
+  "saas-replacement-suggestions",
+  "off-topic"
+ ],
+ "prompts": [
+  {
+   "title": "What brings you to Occupy SaaS?",
+   "single_select": false,
+   "required": true,
+   "in_onboarding": true,
+   "options": [
+    {
+     "title": "I want to build or contribute",
+     "description": "Code, design, docs, testing",
+     "channels": [
+      "developers",
+      "contributing-coordination",
+      "suggestion-board",
+      "zero-authy",
+      "sales-compel"
+     ]
+    },
+    {
+     "title": "I want to replace a SaaS my business pays for",
+     "description": "Find or request an open alternative",
+     "channels": [
+      "saas-replacement-suggestions",
+      "suggestion-board"
+     ]
+    },
+    {
+     "title": "I want to run it on my own hardware",
+     "description": "Self-hosting and sovereign cloud",
+     "channels": [
+      "infra-sovereign-plan",
+      "infra-sovereign-discuss",
+      "infra-sovereign-support"
+     ],
+     "roles": [
+      "Interest: Self-Hosting"
+     ]
+    },
+    {
+     "title": "Just looking around",
+     "description": "Hang out, read, ask questions",
+     "channels": [
+      "thought-provoking",
+      "ai-funny"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Which areas interest you?",
+   "single_select": false,
+   "required": false,
+   "in_onboarding": true,
+   "options": [
+    {
+     "title": "Comms and Social",
+     "channels": [
+      "comms-social-plan",
+      "comms-social-discuss",
+      "comms-social-support"
+     ]
+    },
+    {
+     "title": "Creative and Engineering",
+     "channels": [
+      "creative-eng-plan",
+      "creative-eng-discuss",
+      "creative-eng-support"
+     ]
+    },
+    {
+     "title": "Data and AI",
+     "channels": [
+      "data-ai-plan",
+      "data-ai-discuss",
+      "data-ai-support"
+     ]
+    },
+    {
+     "title": "Home and Health",
+     "channels": [
+      "home-health-plan",
+      "home-health-discuss",
+      "home-health-support"
+     ]
+    },
+    {
+     "title": "Infra and Sovereign Cloud",
+     "channels": [
+      "infra-sovereign-plan",
+      "infra-sovereign-discuss",
+      "infra-sovereign-support"
+     ]
+    },
+    {
+     "title": "Mobility and Commerce",
+     "channels": [
+      "mobility-commerce-plan",
+      "mobility-commerce-discuss",
+      "mobility-commerce-support"
+     ]
+    },
+    {
+     "title": "Money and Legal",
+     "channels": [
+      "money-legal-plan",
+      "money-legal-discuss",
+      "money-legal-support"
+     ]
+    },
+    {
+     "title": "Office and Docs",
+     "channels": [
+      "office-docs-plan",
+      "office-docs-discuss",
+      "office-docs-support"
+     ]
+    },
+    {
+     "title": "Work and Knowledge",
+     "channels": [
+      "work-knowledge-plan",
+      "work-knowledge-discuss",
+      "work-knowledge-support"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Join a working group?",
+   "single_select": false,
+   "required": false,
+   "in_onboarding": true,
+   "options": [
+    {
+     "title": "Identity & Auth",
+     "channels": [
+      "wg-identity-auth"
+     ],
+     "roles": [
+      "Interest: Identity & Auth"
+     ]
+    },
+    {
+     "title": "AI Agents",
+     "channels": [
+      "wg-ai-agents"
+     ],
+     "roles": [
+      "Interest: AI Agents"
+     ]
+    },
+    {
+     "title": "Self-Hosting",
+     "channels": [
+      "wg-self-hosting"
+     ],
+     "roles": [
+      "Interest: Self-Hosting"
+     ]
+    },
+    {
+     "title": "Productivity Apps",
+     "channels": [
+      "wg-productivity-apps"
+     ],
+     "roles": [
+      "Interest: Productivity Apps"
+     ]
+    },
+    {
+     "title": "Go-To-Market",
+     "channels": [
+      "wg-go-to-market"
+     ],
+     "roles": [
+      "Interest: Go-To-Market"
+     ]
+    },
+    {
+     "title": "Design & UX",
+     "channels": [
+      "wg-design-ux"
+     ],
+     "roles": [
+      "Interest: Design & UX"
+     ]
+    }
+   ]
+  }
+ ]
 }
