@@ -1,0 +1,17 @@
+name: Suggest a change to the server
+description: A channel, a topic, a forum tag, onboarding, an alert, a bot setting.
+labels: ["suggestion"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you change?
+      description: Name the channel, category or setting the way Discord shows it.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why?
+    validations:
+      required: true

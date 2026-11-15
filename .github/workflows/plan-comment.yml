@@ -1,0 +1,51 @@
+name: plan-comment
+
+# Posts the plan from a finished "check" run as a PR comment. It never checks out
+# or runs pull request code: it reads the plan text the check wrote, confirms the
+# PR it names really has the head commit that was checked, and comments.
+on:
+  workflow_run:
+    workflows: [check]
+    types: [completed]
+
+permissions:
+  actions: read
+  pull-requests: write
+
+jobs:
+  comment:
+    if: github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: plan
+          path: out
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Comment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+        run: |
+          set -euo pipefail
+          pr="$(tr -cd '0-9' < out/pr.txt | head -c 10)"
+          [ -n "$pr" ] || { echo "no PR number"; exit 1; }
+          head="$(gh api "repos/$REPO/pulls/$pr" --jq .head.sha)"
+          [ "$head" = "$HEAD_SHA" ] || { echo "PR $pr head is $head, not $HEAD_SHA"; exit 0; }
+          marker='<!-- check:plan -->'
+          {
+            echo "$marker"
+            echo "**Check: $CONCLUSION** (against the files on main)"
+            echo
+            head -c 60000 out/plan.md
+          } > body.md
+          id="$(gh api "repos/$REPO/issues/$pr/comments" --paginate \
+                --jq ".[] | select(.body | startswith(\"$marker\")) | .id" | tail -n1)"
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/$REPO/issues/comments/$id" -F body=@body.md > /dev/null
+          else
+            gh api -X POST "repos/$REPO/issues/$pr/comments" -F body=@body.md > /dev/null
+          fi

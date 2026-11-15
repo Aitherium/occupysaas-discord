@@ -1,0 +1,16 @@
+{
+ "enabled": [
+  "aitherium-agents",
+  "aitherium_feedback",
+  "arena",
+  "collab",
+  "collective",
+  "collective-profile",
+  "collective-work",
+  "join",
+  "onboard",
+  "orchestrator",
+  "spaces"
+ ],
+ "disabled": []
+}

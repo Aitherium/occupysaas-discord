@@ -1,0 +1,13 @@
+{
+ "enabled": true,
+ "mode": "warn+alert",
+ "alert_channel": "",
+ "alert_role": "",
+ "staff_roles": [
+  "Peace Officer",
+  "Robot Overlord",
+  "AI Specialist"
+ ],
+ "allow_rules": [],
+ "deny_rules": []
+}

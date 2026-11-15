@@ -1,0 +1,57 @@
+name: check
+
+# Validates every file and plans the change against main. Runs with a read-only
+# token and no secrets, so it is safe on pull requests from forks; the comment is
+# posted by plan-comment.yml.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+env:
+  AWDISCORD: "awdiscord @ git+https://github.com/Aitherium/awdiscord@8ee70365c93ffa0697c0ddf979efc1b660d57897"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install the bot library (pinned)
+        run: python -m pip install --quiet "$AWDISCORD"
+      - name: Check the files
+        run: python tools/serverops.py check
+      - name: Dry run (export == files)
+        run: python -m unittest discover -s tools -p "test_*.py" -v
+      - name: Plan against main
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          LABELS: ${{ join(github.event.pull_request.labels.*.name, ',') }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          git worktree add --detach "$RUNNER_TEMP/base" "$BASE_SHA"
+          mkdir -p out
+          echo "$PR_NUMBER" > out/pr.txt
+          set +e
+          python tools/serverops.py ci --base "$RUNNER_TEMP/base" --head . \
+            --labels "$LABELS" --out out/plan.md
+          status=$?
+          set -e
+          cat out/plan.md >> "$GITHUB_STEP_SUMMARY"
+          exit $status
+      - name: Keep the plan for the comment
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: plan
+          path: out/
+          retention-days: 7

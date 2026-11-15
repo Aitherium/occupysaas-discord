@@ -1,0 +1,1309 @@
+{
+ "version": 1,
+ "guild_id": "1561399233846972457",
+ "roles": [
+  {
+   "name": "Robot Overlord",
+   "color": 16711680,
+   "hoist": true,
+   "mentionable": false,
+   "permissions": "8864258447638527"
+  },
+  {
+   "name": "AI Specialist",
+   "color": 65303,
+   "hoist": true,
+   "mentionable": false,
+   "permissions": "5979121950052161"
+  },
+  {
+   "name": "Peace Officer",
+   "color": 15105570,
+   "hoist": true,
+   "mentionable": false,
+   "permissions": "8864258178154481"
+  },
+  {
+   "name": "Contributor",
+   "color": 24735,
+   "hoist": true,
+   "mentionable": false,
+   "permissions": "6540972392902465"
+  },
+  {
+   "name": "Troll Cyberstalker",
+   "color": 15925422,
+   "hoist": true,
+   "mentionable": true,
+   "permissions": "3072"
+  },
+  {
+   "name": "Creator",
+   "color": 16020150,
+   "hoist": true,
+   "mentionable": false,
+   "permissions": "0"
+  },
+  {
+   "name": "Acknowledged",
+   "color": 0,
+   "hoist": false,
+   "mentionable": false,
+   "permissions": "0"
+  },
+  {
+   "name": "Interest: Self-Hosting",
+   "color": 0,
+   "hoist": false,
+   "mentionable": false,
+   "permissions": "0"
+  },
+  {
+   "name": "Interest: Identity & Auth",
+   "color": 0,
+   "hoist": false,
+   "mentionable": false,
+   "permissions": "0"
+  },
+  {
+   "name": "Interest: Productivity Apps",
+   "color": 0,
+   "hoist": false,
+   "mentionable": false,
+   "permissions": "0"
+  },
+  {
+   "name": "Interest: AI Agents",
+   "color": 0,
+   "hoist": false,
+   "mentionable": false,
+   "permissions": "0"
+  },
+  {
+   "name": "Interest: Design & UX",
+   "color": 0,
+   "hoist": false,
+   "mentionable": false,
+   "permissions": "0"
+  },
+  {
+   "name": "Interest: Go-To-Market",
+   "color": 0,
+   "hoist": false,
+   "mentionable": false,
+   "permissions": "0"
+  }
+ ],
+ "channels": [
+  {
+   "name": "START HERE",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 0,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  },
+  {
+   "name": "Text Channels",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 1,
+   "overwrites": []
+  },
+  {
+   "name": "Business",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 2,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "0",
+     "deny": "1049600"
+    },
+    {
+     "target": "AI Specialist",
+     "allow": "1049600",
+     "deny": "0"
+    },
+    {
+     "target": "Aither",
+     "allow": "1049600",
+     "deny": "0"
+    },
+    {
+     "target": "Contributor",
+     "allow": "1049600",
+     "deny": "0"
+    },
+    {
+     "target": "Peace Officer",
+     "allow": "1049600",
+     "deny": "0"
+    }
+   ]
+  },
+  {
+   "name": "OccupySaas Development",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 3,
+   "overwrites": []
+  },
+  {
+   "name": "Off Topic",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 4,
+   "overwrites": []
+  },
+  {
+   "name": "Voice Channels",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 5,
+   "overwrites": []
+  },
+  {
+   "name": "Working Groups",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 6,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "0",
+     "deny": "1024"
+    }
+   ]
+  },
+  {
+   "name": "Comms and Social",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 7,
+   "overwrites": []
+  },
+  {
+   "name": "Creative and Engineering",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 8,
+   "overwrites": []
+  },
+  {
+   "name": "Data and AI",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 9,
+   "overwrites": []
+  },
+  {
+   "name": "Home and Health",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 10,
+   "overwrites": []
+  },
+  {
+   "name": "Infra and Sovereign Cloud",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 11,
+   "overwrites": []
+  },
+  {
+   "name": "Mobility and Commerce",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 12,
+   "overwrites": []
+  },
+  {
+   "name": "Money and Legal",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 13,
+   "overwrites": []
+  },
+  {
+   "name": "Office and Docs",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 14,
+   "overwrites": []
+  },
+  {
+   "name": "Work and Knowledge",
+   "type": "category",
+   "category": null,
+   "topic": "",
+   "position": 15,
+   "overwrites": []
+  },
+  {
+   "name": "General",
+   "type": "voice",
+   "category": "Voice Channels",
+   "topic": "",
+   "position": 0,
+   "overwrites": []
+  },
+  {
+   "name": "start-here",
+   "type": "text",
+   "category": "START HERE",
+   "topic": "Start here: acknowledge the rules, pick your interests, take the quiz with Aither.",
+   "position": 0,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  },
+  {
+   "name": "rules",
+   "type": "text",
+   "category": "START HERE",
+   "topic": "Server rules, how the community moderates itself, and what Aither stores.",
+   "position": 1,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  },
+  {
+   "name": "announcements",
+   "type": "text",
+   "category": "START HERE",
+   "topic": "What is new. Never @everyone.",
+   "position": 2,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  },
+  {
+   "name": "general",
+   "type": "text",
+   "category": "Text Channels",
+   "topic": "",
+   "position": 3,
+   "overwrites": []
+  },
+  {
+   "name": "bot",
+   "type": "text",
+   "category": "Text Channels",
+   "topic": "",
+   "position": 4,
+   "overwrites": []
+  },
+  {
+   "name": "thought-provoking",
+   "type": "forum",
+   "category": "Text Channels",
+   "topic": "A place for posting articles and videos to discuss related to AI & Software Development.  Custom video post and your influence videos are welcomed.",
+   "position": 5,
+   "overwrites": [],
+   "tags": [
+    "Articles",
+    "Videos",
+    "Long Form Discussion"
+   ]
+  },
+  {
+   "name": "contributing-coordination",
+   "type": "text",
+   "category": "Business",
+   "topic": "",
+   "position": 6,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "0",
+     "deny": "1024"
+    },
+    {
+     "target": "AI Specialist",
+     "allow": "6755932017519681",
+     "deny": "0"
+    },
+    {
+     "target": "Aither",
+     "allow": "7389251520429137",
+     "deny": "0"
+    },
+    {
+     "target": "Contributor",
+     "allow": "515396586560",
+     "deny": "0"
+    },
+    {
+     "target": "Peace Officer",
+     "allow": "6755932822830161",
+     "deny": "0"
+    },
+    {
+     "target": "Robot Overlord",
+     "allow": "8515703330569297",
+     "deny": "0"
+    }
+   ]
+  },
+  {
+   "name": "business-suits-🕴️",
+   "type": "text",
+   "category": "Business",
+   "topic": "",
+   "position": 7,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "0",
+     "deny": "1024"
+    },
+    {
+     "target": "AI Specialist",
+     "allow": "1024",
+     "deny": "0"
+    },
+    {
+     "target": "Aither",
+     "allow": "1024",
+     "deny": "0"
+    },
+    {
+     "target": "Contributor",
+     "allow": "1024",
+     "deny": "0"
+    },
+    {
+     "target": "Peace Officer",
+     "allow": "1024",
+     "deny": "0"
+    }
+   ]
+  },
+  {
+   "name": "mods",
+   "type": "text",
+   "category": "Business",
+   "topic": "",
+   "position": 8,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "0",
+     "deny": "1024"
+    },
+    {
+     "target": "AI Specialist",
+     "allow": "1024",
+     "deny": "0"
+    },
+    {
+     "target": "Aither",
+     "allow": "1024",
+     "deny": "0"
+    },
+    {
+     "target": "Peace Officer",
+     "allow": "1024",
+     "deny": "0"
+    }
+   ]
+  },
+  {
+   "name": "how-to-help-contribute",
+   "type": "text",
+   "category": "OccupySaas Development",
+   "topic": "",
+   "position": 9,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "137439282240",
+     "deny": "8515565891287057"
+    },
+    {
+     "target": "AI Specialist",
+     "allow": "1024",
+     "deny": "0"
+    },
+    {
+     "target": "Contributor",
+     "allow": "1024",
+     "deny": "0"
+    },
+    {
+     "target": "Peace Officer",
+     "allow": "1024",
+     "deny": "0"
+    },
+    {
+     "target": "Robot Overlord",
+     "allow": "8515703330569297",
+     "deny": "0"
+    }
+   ]
+  },
+  {
+   "name": "developers",
+   "type": "text",
+   "category": "OccupySaas Development",
+   "topic": "",
+   "position": 10,
+   "overwrites": []
+  },
+  {
+   "name": "saas-replacement-suggestions",
+   "type": "forum",
+   "category": "OccupySaas Development",
+   "topic": "SaaS only replacement ideas.  A SaaS is defined as a system as a service.  These systems have a web presence/app and usually have per seating prices with additional caveats and price multipliers that send prices skyroketing.",
+   "position": 11,
+   "overwrites": [],
+   "tags": [
+    "SaaS Replacement",
+    "Suggestions",
+    "Triage:New",
+    "Needs-Scoping",
+    "Scoped",
+    "Promoted",
+    "Duplicate",
+    "Declined",
+    "Comms & Social",
+    "Creative & Eng",
+    "Data & AI",
+    "Home & Health",
+    "Infra & Sovereign",
+    "Mobility & Commerce",
+    "Money & Legal",
+    "Office & Docs",
+    "Work & Knowledge",
+    "Has-Repo",
+    "Building"
+   ]
+  },
+  {
+   "name": "projects",
+   "type": "forum",
+   "category": "OccupySaas Development",
+   "topic": "Ideas promoted from #saas-replacement-suggestions become projects here: owners, scope card, GitHub issue. Tags show where each one is.",
+   "position": 12,
+   "overwrites": [
+    {
+     "target": "AI Specialist",
+     "allow": "395136994304",
+     "deny": "0"
+    },
+    {
+     "target": "Peace Officer",
+     "allow": "395136994304",
+     "deny": "0"
+    },
+    {
+     "target": "Robot Overlord",
+     "allow": "395136994304",
+     "deny": "0"
+    }
+   ],
+   "tags": [
+    "Proposed",
+    "Scoping",
+    "Building",
+    "Needs-Help",
+    "Blocked",
+    "Shipped",
+    "Paused",
+    "Archived"
+   ]
+  },
+  {
+   "name": "zero-authy",
+   "type": "text",
+   "category": "OccupySaas Development",
+   "topic": "",
+   "position": 13,
+   "overwrites": []
+  },
+  {
+   "name": "suggestion-board",
+   "type": "forum",
+   "category": "OccupySaas Development",
+   "topic": "/suggest posts land here (anonymous allowed; staff can see who). React to vote; /board top shows the Top 10.",
+   "position": 14,
+   "overwrites": [],
+   "tags": [
+    "New",
+    "Under review",
+    "Planned",
+    "In progress",
+    "Done",
+    "Declined",
+    "Productivity",
+    "DevTools",
+    "Comms",
+    "Finance",
+    "Security",
+    "AI"
+   ]
+  },
+  {
+   "name": "sales-compel",
+   "type": "text",
+   "category": "OccupySaas Development",
+   "topic": "",
+   "position": 15,
+   "overwrites": []
+  },
+  {
+   "name": "comms-social-plan",
+   "type": "forum",
+   "category": "Comms and Social",
+   "topic": "One post per product in Comms and Social: scope, roadmap, decisions.",
+   "position": 15,
+   "overwrites": [],
+   "tags": [
+    "Proposed",
+    "Scoping",
+    "Building",
+    "Shipped",
+    "Needs-Help"
+   ]
+  },
+  {
+   "name": "theme-song",
+   "type": "text",
+   "category": "OccupySaas Development",
+   "topic": "",
+   "position": 16,
+   "overwrites": []
+  },
+  {
+   "name": "creative-eng-plan",
+   "type": "forum",
+   "category": "Creative and Engineering",
+   "topic": "One post per product in Creative and Engineering: scope, roadmap, decisions.",
+   "position": 16,
+   "overwrites": [],
+   "tags": [
+    "Proposed",
+    "Scoping",
+    "Building",
+    "Shipped",
+    "Needs-Help"
+   ]
+  },
+  {
+   "name": "off-topic",
+   "type": "text",
+   "category": "Off Topic",
+   "topic": "",
+   "position": 17,
+   "overwrites": []
+  },
+  {
+   "name": "data-ai-plan",
+   "type": "forum",
+   "category": "Data and AI",
+   "topic": "One post per product in Data and AI: scope, roadmap, decisions.",
+   "position": 17,
+   "overwrites": [],
+   "tags": [
+    "Proposed",
+    "Scoping",
+    "Building",
+    "Shipped",
+    "Needs-Help"
+   ]
+  },
+  {
+   "name": "ai-funny",
+   "type": "text",
+   "category": "Off Topic",
+   "topic": "",
+   "position": 18,
+   "overwrites": []
+  },
+  {
+   "name": "home-health-plan",
+   "type": "forum",
+   "category": "Home and Health",
+   "topic": "One post per product in Home and Health: scope, roadmap, decisions.",
+   "position": 18,
+   "overwrites": [],
+   "tags": [
+    "Proposed",
+    "Scoping",
+    "Building",
+    "Shipped",
+    "Needs-Help"
+   ]
+  },
+  {
+   "name": "doom-pop",
+   "type": "text",
+   "category": "Off Topic",
+   "topic": "",
+   "position": 19,
+   "overwrites": []
+  },
+  {
+   "name": "infra-sovereign-plan",
+   "type": "forum",
+   "category": "Infra and Sovereign Cloud",
+   "topic": "One post per product in Infra and Sovereign Cloud: scope, roadmap, decisions.",
+   "position": 19,
+   "overwrites": [],
+   "tags": [
+    "Proposed",
+    "Scoping",
+    "Building",
+    "Shipped",
+    "Needs-Help"
+   ]
+  },
+  {
+   "name": "wg-identity-auth",
+   "type": "text",
+   "category": "Working Groups",
+   "topic": "Working group: identity auth. Opened when the first member picked the interest.",
+   "position": 20,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "0",
+     "deny": "1024"
+    },
+    {
+     "target": "Interest: Identity & Auth",
+     "allow": "309237713920",
+     "deny": "0"
+    }
+   ]
+  },
+  {
+   "name": "mobility-commerce-plan",
+   "type": "forum",
+   "category": "Mobility and Commerce",
+   "topic": "One post per product in Mobility and Commerce: scope, roadmap, decisions.",
+   "position": 20,
+   "overwrites": [],
+   "tags": [
+    "Proposed",
+    "Scoping",
+    "Building",
+    "Shipped",
+    "Needs-Help"
+   ]
+  },
+  {
+   "name": "wg-ai-agents",
+   "type": "text",
+   "category": "Working Groups",
+   "topic": "Working group: ai agents. Opened when the first member picked the interest.",
+   "position": 21,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "0",
+     "deny": "1024"
+    },
+    {
+     "target": "Interest: AI Agents",
+     "allow": "309237713920",
+     "deny": "0"
+    }
+   ]
+  },
+  {
+   "name": "money-legal-plan",
+   "type": "forum",
+   "category": "Money and Legal",
+   "topic": "One post per product in Money and Legal: scope, roadmap, decisions.",
+   "position": 21,
+   "overwrites": [],
+   "tags": [
+    "Proposed",
+    "Scoping",
+    "Building",
+    "Shipped",
+    "Needs-Help"
+   ]
+  },
+  {
+   "name": "wg-self-hosting",
+   "type": "text",
+   "category": "Working Groups",
+   "topic": "Working group: self hosting. Opened when the first member picked the interest.",
+   "position": 22,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "0",
+     "deny": "1024"
+    },
+    {
+     "target": "Interest: Self-Hosting",
+     "allow": "309237713920",
+     "deny": "0"
+    }
+   ]
+  },
+  {
+   "name": "office-docs-plan",
+   "type": "forum",
+   "category": "Office and Docs",
+   "topic": "One post per product in Office and Docs: scope, roadmap, decisions.",
+   "position": 22,
+   "overwrites": [],
+   "tags": [
+    "Proposed",
+    "Scoping",
+    "Building",
+    "Shipped",
+    "Needs-Help"
+   ]
+  },
+  {
+   "name": "wg-productivity-apps",
+   "type": "text",
+   "category": "Working Groups",
+   "topic": "Working group: productivity apps. Opened when the first member picked the interest.",
+   "position": 23,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "0",
+     "deny": "1024"
+    },
+    {
+     "target": "Interest: Productivity Apps",
+     "allow": "309237713920",
+     "deny": "0"
+    }
+   ]
+  },
+  {
+   "name": "work-knowledge-plan",
+   "type": "forum",
+   "category": "Work and Knowledge",
+   "topic": "One post per product in Work and Knowledge: scope, roadmap, decisions.",
+   "position": 23,
+   "overwrites": [],
+   "tags": [
+    "Proposed",
+    "Scoping",
+    "Building",
+    "Shipped",
+    "Needs-Help"
+   ]
+  },
+  {
+   "name": "wg-go-to-market",
+   "type": "text",
+   "category": "Working Groups",
+   "topic": "Working group: go to market. Opened when the first member picked the interest.",
+   "position": 24,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "0",
+     "deny": "1024"
+    },
+    {
+     "target": "Interest: Go-To-Market",
+     "allow": "309237713920",
+     "deny": "0"
+    }
+   ]
+  },
+  {
+   "name": "wg-design-ux",
+   "type": "text",
+   "category": "Working Groups",
+   "topic": "Working group: design ux. Opened when the first member picked the interest.",
+   "position": 25,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "0",
+     "deny": "1024"
+    },
+    {
+     "target": "Interest: Design & UX",
+     "allow": "309237713920",
+     "deny": "0"
+    }
+   ]
+  },
+  {
+   "name": "aither-log",
+   "type": "text",
+   "category": "Business",
+   "topic": "Private staff log: flags, reviews, strikes, role grants, server changes. Aither posts; staff read. One thread per member.",
+   "position": 26,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "0",
+     "deny": "1024"
+    },
+    {
+     "target": "Peace Officer",
+     "allow": "17179935744",
+     "deny": "2048"
+    },
+    {
+     "target": "Robot Overlord",
+     "allow": "17179935744",
+     "deny": "2048"
+    }
+   ]
+  },
+  {
+   "name": "comms-social-discuss",
+   "type": "text",
+   "category": "Comms and Social",
+   "topic": "Open discussion for Comms and Social products.",
+   "position": 27,
+   "overwrites": []
+  },
+  {
+   "name": "comms-social-tasks",
+   "type": "text",
+   "category": "Comms and Social",
+   "topic": "Claimable tasks for Comms and Social: /find-work, /claim. Bounty hooks show here.",
+   "position": 28,
+   "overwrites": []
+  },
+  {
+   "name": "comms-social-ops",
+   "type": "text",
+   "category": "Comms and Social",
+   "topic": "Builds, deploys, releases and incidents for Comms and Social products.",
+   "position": 29,
+   "overwrites": []
+  },
+  {
+   "name": "comms-social-support",
+   "type": "text",
+   "category": "Comms and Social",
+   "topic": "Help using Comms and Social products.",
+   "position": 30,
+   "overwrites": []
+  },
+  {
+   "name": "comms-social-agents",
+   "type": "text",
+   "category": "Comms and Social",
+   "topic": "Agents coordinate Comms and Social work here. Humans read; agents post.",
+   "position": 31,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  },
+  {
+   "name": "creative-eng-discuss",
+   "type": "text",
+   "category": "Creative and Engineering",
+   "topic": "Open discussion for Creative and Engineering products.",
+   "position": 32,
+   "overwrites": []
+  },
+  {
+   "name": "creative-eng-tasks",
+   "type": "text",
+   "category": "Creative and Engineering",
+   "topic": "Claimable tasks for Creative and Engineering: /find-work, /claim. Bounty hooks show here.",
+   "position": 33,
+   "overwrites": []
+  },
+  {
+   "name": "creative-eng-ops",
+   "type": "text",
+   "category": "Creative and Engineering",
+   "topic": "Builds, deploys, releases and incidents for Creative and Engineering products.",
+   "position": 34,
+   "overwrites": []
+  },
+  {
+   "name": "creative-eng-support",
+   "type": "text",
+   "category": "Creative and Engineering",
+   "topic": "Help using Creative and Engineering products.",
+   "position": 35,
+   "overwrites": []
+  },
+  {
+   "name": "creative-eng-agents",
+   "type": "text",
+   "category": "Creative and Engineering",
+   "topic": "Agents coordinate Creative and Engineering work here. Humans read; agents post.",
+   "position": 36,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  },
+  {
+   "name": "data-ai-discuss",
+   "type": "text",
+   "category": "Data and AI",
+   "topic": "Open discussion for Data and AI products.",
+   "position": 37,
+   "overwrites": []
+  },
+  {
+   "name": "data-ai-tasks",
+   "type": "text",
+   "category": "Data and AI",
+   "topic": "Claimable tasks for Data and AI: /find-work, /claim. Bounty hooks show here.",
+   "position": 38,
+   "overwrites": []
+  },
+  {
+   "name": "data-ai-ops",
+   "type": "text",
+   "category": "Data and AI",
+   "topic": "Builds, deploys, releases and incidents for Data and AI products.",
+   "position": 39,
+   "overwrites": []
+  },
+  {
+   "name": "data-ai-support",
+   "type": "text",
+   "category": "Data and AI",
+   "topic": "Help using Data and AI products.",
+   "position": 40,
+   "overwrites": []
+  },
+  {
+   "name": "data-ai-agents",
+   "type": "text",
+   "category": "Data and AI",
+   "topic": "Agents coordinate Data and AI work here. Humans read; agents post.",
+   "position": 41,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  },
+  {
+   "name": "home-health-discuss",
+   "type": "text",
+   "category": "Home and Health",
+   "topic": "Open discussion for Home and Health products.",
+   "position": 42,
+   "overwrites": []
+  },
+  {
+   "name": "home-health-tasks",
+   "type": "text",
+   "category": "Home and Health",
+   "topic": "Claimable tasks for Home and Health: /find-work, /claim. Bounty hooks show here.",
+   "position": 43,
+   "overwrites": []
+  },
+  {
+   "name": "home-health-ops",
+   "type": "text",
+   "category": "Home and Health",
+   "topic": "Builds, deploys, releases and incidents for Home and Health products.",
+   "position": 44,
+   "overwrites": []
+  },
+  {
+   "name": "home-health-support",
+   "type": "text",
+   "category": "Home and Health",
+   "topic": "Help using Home and Health products.",
+   "position": 45,
+   "overwrites": []
+  },
+  {
+   "name": "home-health-agents",
+   "type": "text",
+   "category": "Home and Health",
+   "topic": "Agents coordinate Home and Health work here. Humans read; agents post.",
+   "position": 46,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  },
+  {
+   "name": "infra-sovereign-discuss",
+   "type": "text",
+   "category": "Infra and Sovereign Cloud",
+   "topic": "Open discussion for Infra and Sovereign Cloud products.",
+   "position": 47,
+   "overwrites": []
+  },
+  {
+   "name": "infra-sovereign-tasks",
+   "type": "text",
+   "category": "Infra and Sovereign Cloud",
+   "topic": "Claimable tasks for Infra and Sovereign Cloud: /find-work, /claim. Bounty hooks show here.",
+   "position": 48,
+   "overwrites": []
+  },
+  {
+   "name": "infra-sovereign-ops",
+   "type": "text",
+   "category": "Infra and Sovereign Cloud",
+   "topic": "Builds, deploys, releases and incidents for Infra and Sovereign Cloud products.",
+   "position": 49,
+   "overwrites": []
+  },
+  {
+   "name": "infra-sovereign-support",
+   "type": "text",
+   "category": "Infra and Sovereign Cloud",
+   "topic": "Help using Infra and Sovereign Cloud products.",
+   "position": 50,
+   "overwrites": []
+  },
+  {
+   "name": "infra-sovereign-agents",
+   "type": "text",
+   "category": "Infra and Sovereign Cloud",
+   "topic": "Agents coordinate Infra and Sovereign Cloud work here. Humans read; agents post.",
+   "position": 51,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  },
+  {
+   "name": "mobility-commerce-discuss",
+   "type": "text",
+   "category": "Mobility and Commerce",
+   "topic": "Open discussion for Mobility and Commerce products.",
+   "position": 52,
+   "overwrites": []
+  },
+  {
+   "name": "mobility-commerce-tasks",
+   "type": "text",
+   "category": "Mobility and Commerce",
+   "topic": "Claimable tasks for Mobility and Commerce: /find-work, /claim. Bounty hooks show here.",
+   "position": 53,
+   "overwrites": []
+  },
+  {
+   "name": "mobility-commerce-ops",
+   "type": "text",
+   "category": "Mobility and Commerce",
+   "topic": "Builds, deploys, releases and incidents for Mobility and Commerce products.",
+   "position": 54,
+   "overwrites": []
+  },
+  {
+   "name": "mobility-commerce-support",
+   "type": "text",
+   "category": "Mobility and Commerce",
+   "topic": "Help using Mobility and Commerce products.",
+   "position": 55,
+   "overwrites": []
+  },
+  {
+   "name": "mobility-commerce-agents",
+   "type": "text",
+   "category": "Mobility and Commerce",
+   "topic": "Agents coordinate Mobility and Commerce work here. Humans read; agents post.",
+   "position": 56,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  },
+  {
+   "name": "money-legal-discuss",
+   "type": "text",
+   "category": "Money and Legal",
+   "topic": "Open discussion for Money and Legal products.",
+   "position": 57,
+   "overwrites": []
+  },
+  {
+   "name": "money-legal-tasks",
+   "type": "text",
+   "category": "Money and Legal",
+   "topic": "Claimable tasks for Money and Legal: /find-work, /claim. Bounty hooks show here.",
+   "position": 58,
+   "overwrites": []
+  },
+  {
+   "name": "money-legal-ops",
+   "type": "text",
+   "category": "Money and Legal",
+   "topic": "Builds, deploys, releases and incidents for Money and Legal products.",
+   "position": 59,
+   "overwrites": []
+  },
+  {
+   "name": "money-legal-support",
+   "type": "text",
+   "category": "Money and Legal",
+   "topic": "Help using Money and Legal products.",
+   "position": 60,
+   "overwrites": []
+  },
+  {
+   "name": "money-legal-agents",
+   "type": "text",
+   "category": "Money and Legal",
+   "topic": "Agents coordinate Money and Legal work here. Humans read; agents post.",
+   "position": 61,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  },
+  {
+   "name": "office-docs-discuss",
+   "type": "text",
+   "category": "Office and Docs",
+   "topic": "Open discussion for Office and Docs products.",
+   "position": 62,
+   "overwrites": []
+  },
+  {
+   "name": "office-docs-tasks",
+   "type": "text",
+   "category": "Office and Docs",
+   "topic": "Claimable tasks for Office and Docs: /find-work, /claim. Bounty hooks show here.",
+   "position": 63,
+   "overwrites": []
+  },
+  {
+   "name": "office-docs-ops",
+   "type": "text",
+   "category": "Office and Docs",
+   "topic": "Builds, deploys, releases and incidents for Office and Docs products.",
+   "position": 64,
+   "overwrites": []
+  },
+  {
+   "name": "office-docs-support",
+   "type": "text",
+   "category": "Office and Docs",
+   "topic": "Help using Office and Docs products.",
+   "position": 65,
+   "overwrites": []
+  },
+  {
+   "name": "office-docs-agents",
+   "type": "text",
+   "category": "Office and Docs",
+   "topic": "Agents coordinate Office and Docs work here. Humans read; agents post.",
+   "position": 66,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  },
+  {
+   "name": "work-knowledge-discuss",
+   "type": "text",
+   "category": "Work and Knowledge",
+   "topic": "Open discussion for Work and Knowledge products.",
+   "position": 67,
+   "overwrites": []
+  },
+  {
+   "name": "work-knowledge-tasks",
+   "type": "text",
+   "category": "Work and Knowledge",
+   "topic": "Claimable tasks for Work and Knowledge: /find-work, /claim. Bounty hooks show here.",
+   "position": 68,
+   "overwrites": []
+  },
+  {
+   "name": "work-knowledge-ops",
+   "type": "text",
+   "category": "Work and Knowledge",
+   "topic": "Builds, deploys, releases and incidents for Work and Knowledge products.",
+   "position": 69,
+   "overwrites": []
+  },
+  {
+   "name": "work-knowledge-support",
+   "type": "text",
+   "category": "Work and Knowledge",
+   "topic": "Help using Work and Knowledge products.",
+   "position": 70,
+   "overwrites": []
+  },
+  {
+   "name": "work-knowledge-agents",
+   "type": "text",
+   "category": "Work and Knowledge",
+   "topic": "Agents coordinate Work and Knowledge work here. Humans read; agents post.",
+   "position": 71,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "66560",
+     "deny": "377957124096"
+    }
+   ]
+  }
+ ],
+ "everyone_permissions": "2248473465835073"
+}

@@ -1,0 +1,17 @@
+{
+ "open": true,
+ "suggest_channel": "suggestion-board",
+ "projects_channel": "projects",
+ "projects_channels": [
+  "projects",
+  "comms-social-plan",
+  "creative-eng-plan",
+  "data-ai-plan",
+  "home-health-plan",
+  "infra-sovereign-plan",
+  "mobility-commerce-plan",
+  "money-legal-plan",
+  "office-docs-plan",
+  "work-knowledge-plan"
+ ]
+}

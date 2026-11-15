@@ -1,0 +1,6 @@
+{
+ "enabled": true,
+ "channel": "general",
+ "every_hours": 24,
+ "text": "**Welcome to Occupy SaaS.** We build open-source replacements for the SaaS tools everyone rents, and run them ourselves.\n\n**Start here**\n- Say hi in <#1561399235881205783>: what you build, or which SaaS you'd love to replace.\n- Pitch a target in <#1566513557535727627>.\n- Active projects: <#1566514416151961751> (open auth and identity) and <#1566514446967251034> (open CRM).\n- Writing code? <#1566513317474996344>.\n\n**Ask Aither** (mention it in any channel)\n- `@Aither what is zero-authy and how do I run it?`\n- `@Aither catch me up on #saas-replacement-suggestions`\n- `@Aither draft a spec for an open alternative to <tool>`\n\nWant the bot on your own model? Run `/selfhost`."
+}
