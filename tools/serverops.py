@@ -100,6 +100,12 @@ SETTINGS: list[dict[str, Any]] = [
      "key": "board:config",
      "fields": {"open": "bool", "suggest_channel": "channel",
                 "projects_channel": "channel", "projects_channels": "channels"}},
+    {"file": "automations/channel-watch.json", "plugin": "channel-watch",
+     "key": "watch:config",
+     "fields": {"enabled": "bool", "categories": "channels", "channels": "channels",
+                "exclude_channels": "channels", "suffixes": "list", "auto_reply": "bool",
+                "reply_after_hours": "int", "digest_channel": "channel",
+                "feed_channel": "channel"}},
 ]
 SELF_ASSIGN = {"plugin": "collective-profile", "prefix": "allow:"}
 
