@@ -1,0 +1,48 @@
+{
+ "enabled": true,
+ "categories": [
+  "Comms and Social",
+  "Creative and Engineering",
+  "Data and AI",
+  "Home and Health",
+  "Infra and Sovereign Cloud",
+  "Mobility and Commerce",
+  "Money and Legal",
+  "Office and Docs",
+  "Work and Knowledge"
+ ],
+ "channels": [
+  "general",
+  "contributing-coordination",
+  "developers",
+  "how-to-help-contribute",
+  "business-suits-🕴️",
+  "zero-authy",
+  "sales-compel"
+ ],
+ "exclude_channels": [],
+ "suffixes": [
+  "-discuss",
+  "-support",
+  "-plan"
+ ],
+ "auto_reply": true,
+ "reply_after_hours": 3,
+ "digest_channel": "general",
+ "feed_channel": "",
+ "channel_names": [
+  "general",
+  "contributing-coordination",
+  "developers",
+  "how-to-help-contribute",
+  "business-suits-🕴️",
+  "zero-authy",
+  "sales-compel"
+ ],
+ "fast_path": true,
+ "fast_after_minutes": 3,
+ "fast_per_hour": 4,
+ "research": true,
+ "track_board": true,
+ "summary_every": 40
+}
