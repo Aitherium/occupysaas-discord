@@ -1,0 +1,25 @@
+{
+ "enabled": true,
+ "categories": [
+  "Comms and Social",
+  "Creative and Engineering",
+  "Data and AI",
+  "Home and Health",
+  "Infra and Sovereign Cloud",
+  "Mobility and Commerce",
+  "Money and Legal",
+  "Office and Docs",
+  "Work and Knowledge"
+ ],
+ "channels": [],
+ "exclude_channels": [],
+ "suffixes": [
+  "-discuss",
+  "-support",
+  "-plan"
+ ],
+ "auto_reply": true,
+ "reply_after_hours": 3,
+ "digest_channel": "general",
+ "feed_channel": ""
+}
