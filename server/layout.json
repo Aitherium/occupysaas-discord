@@ -341,6 +341,26 @@
    ]
   },
   {
+   "name": "tech-news",
+   "type": "forum",
+   "category": "Text Channels",
+   "topic": "Daily AI, software and jobs wire from Aither. Links only, always to the source",
+   "position": 72,
+   "overwrites": [
+    {
+     "target": "@everyone",
+     "allow": "274877973568",
+     "deny": "34359740416"
+    }
+   ],
+   "tags": [
+    "Wire",
+    "Research",
+    "Releases",
+    "Jobs"
+   ]
+  },
+  {
    "name": "contributing-coordination",
    "type": "text",
    "category": "Business",
